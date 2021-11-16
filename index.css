@@ -10,15 +10,17 @@
 숫자는 0으로 초기화
 */
 
-.title {
-    text-align: center;
-    padding: 5% 0px 0px;
-    box-sizing: border-box;
-    font-size: 4rem;
+
+article {
+    width: 100vw;
+    height: 100vh;
+    display: table-cell;
+    vertical-align: middle;
 }
 
 section {
     width: 70%;
+    max-width: 1920px;
     height: 70vh;
     margin: 1vw auto;
     padding: 3% 5%;
@@ -26,7 +28,14 @@ section {
     border-radius: 57px;
     background: linear-gradient(145deg, #ffffff, #e6e6e6);
     box-shadow: 17px 17px 31px #dedede,
-        -17px -17px 31px #ffffff;
+    -17px -17px 31px #ffffff;
+}
+
+.title {
+    text-align: center;
+    /* padding: 5% 0px 0px; */
+    box-sizing: border-box;
+    font-size: 4rem;
 }
 
 /* || clock */
@@ -45,7 +54,7 @@ section {
     height: 100%;
     display: grid;
     place-items: center;
-    font-size: 10rem;
+    font-size: 10vmin;
 }
 
 /* || btns */
@@ -73,13 +82,20 @@ section {
     height: 100%;
     border: 1px solid #fff;
     border-radius: 47px;
-    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    background: linear-gradient(145deg, #e6e6e6, #ccc);
     box-shadow: 31px 31px 36px #cccccc,
         -31px -31px 36px #ffffff;
 }
 
 /* play */
+.control_btns li:first-child {
+    background: linear-gradient(145deg, #e6e6e6, #65AEE3);
+}
 
 /* pause */
+.control_btns li:nth-child(2) {
+    background-color: #D76F6F;
+    background: linear-gradient(145deg, #e6e6e6, #D76F6F);
+}
 
 /* reset */

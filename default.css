@@ -105,11 +105,13 @@ html {
 
 html {
     scroll-behavior: smooth;
+    height: -webkit-fill-available;
 }
 
 body {
     line-height: 1;
     font-size: 1.5rem;
+    height: -webkit-fill-available;
 }
 
 html::-webkit-scrollbar,
@@ -160,7 +162,7 @@ a {
 /* change colours to suit your needs */
 ins {
     background-color: #ff9;
-    color: #000;
+    color: #333;
     text-decoration: none;
 }
 
