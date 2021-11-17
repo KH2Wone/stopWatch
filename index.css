@@ -49,12 +49,17 @@ section {
     margin: 0 auto;
 }
 
-.clock .nums {
+#nums {
     width: 100%;
     height: 100%;
-    display: grid;
-    place-items: center;
     font-size: 10vmin;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#nums span {
+    margin: 0px 1vw;
 }
 
 /* || btns */
