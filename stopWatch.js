@@ -31,4 +31,16 @@ let startWatch = () => {
     timeRecord = setInterval(moveClock, 1000);
 }
 
+let stopWatch = () => {
+    clearInterval(timeRecord);
+}
+
+let resetWatch = () => {
+    clearInterval(timeRecord);
+    hou = min = sec = 0;
+    watch.innerText = '00 : 00 : 00';
+};
+
 startB.addEventListener('click', startWatch);
+stopB.addEventListener('click', stopWatch);
+resetB.addEventListener('click', resetWatch);
