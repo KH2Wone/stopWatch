@@ -70,7 +70,7 @@ section {
     justify-content: space-between;
     justify-items: center;
     grid-template-rows: repeat(1, 1fr);
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     padding-top: 5vw;
     box-sizing: border-box;
     column-gap: 5%;

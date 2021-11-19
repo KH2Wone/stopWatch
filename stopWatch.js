@@ -1,5 +1,4 @@
-const startB = document.getElementById('start_btn'),
-    stopB = document.getElementById('stop_btn'),
+const toggleId = document.getElementById('toggle'),
     resetB = document.getElementById('reset_btn');
 const watch = document.getElementById('nums');
 
@@ -29,10 +28,12 @@ let moveClock = () => {
 
 let startWatch = () => {
     timeRecord = setInterval(moveClock, 1000);
+    toggleId.innerText = 'STOP';
 }
 
 let stopWatch = () => {
     clearInterval(timeRecord);
+    toggleId.innerText = 'START';
 }
 
 let resetWatch = () => {
@@ -41,6 +42,15 @@ let resetWatch = () => {
     watch.innerText = '00 : 00 : 00';
 };
 
-startB.addEventListener('click', startWatch);
-stopB.addEventListener('click', stopWatch);
+
+let toggleSwith = () => {
+    if(toggleId.innerText === 'START') {
+        startWatch();
+    } else {
+        // STOP
+        stopWatch();
+    }
+}
+
+toggleId.addEventListener('click', toggleSwith);
 resetB.addEventListener('click', resetWatch);
