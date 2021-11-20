@@ -5,6 +5,8 @@ const watch = document.getElementById('nums');
 let hou = min = sec = 0;
 let timeRecord;
 
+//////////////////////////////////////////////////////////
+
 let moveClock = () => {
     if (sec !== 59) {
         // 
@@ -26,6 +28,15 @@ let moveClock = () => {
     watch.innerText = `${hou < 10 ? "0"+hou : hou} : ${min < 10 ? "0"+min : min} : ${sec < 10 ? "0"+sec : sec}`;
 }
 
+let toggleSwitch = () => {
+    if(toggleId.innerText === 'START') {
+        startWatch();
+    } else {
+        // STOP
+        stopWatch();
+    }
+}
+
 let startWatch = () => {
     timeRecord = setInterval(moveClock, 1000);
     toggleId.innerText = 'STOP';
@@ -37,20 +48,14 @@ let stopWatch = () => {
 }
 
 let resetWatch = () => {
+    // 이미 작동중인 스톱워치에서 reset 버튼 누를 시 START로 돌아오기 및 reset 기능 작동
+    if(toggleId.innerText === 'STOP') stopWatch();
+    
     clearInterval(timeRecord);
     hou = min = sec = 0;
     watch.innerText = '00 : 00 : 00';
 };
 
 
-let toggleSwith = () => {
-    if(toggleId.innerText === 'START') {
-        startWatch();
-    } else {
-        // STOP
-        stopWatch();
-    }
-}
-
-toggleId.addEventListener('click', toggleSwith);
+toggleId.addEventListener('click', toggleSwitch);
 resetB.addEventListener('click', resetWatch);
