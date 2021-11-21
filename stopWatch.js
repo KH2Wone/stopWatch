@@ -40,17 +40,19 @@ let toggleSwitch = () => {
 let startWatch = () => {
     timeRecord = setInterval(moveClock, 1000);
     toggleId.innerText = 'STOP';
+    watch.style.color = '#333';
 }
 
 let stopWatch = () => {
     clearInterval(timeRecord);
     toggleId.innerText = 'START';
+    watch.style.color = '#EF0000';
 }
 
 let resetWatch = () => {
     // 이미 작동중인 스톱워치에서 reset 버튼 누를 시 START로 돌아오기 및 reset 기능 작동
     if(toggleId.innerText === 'STOP') stopWatch();
-    
+
     clearInterval(timeRecord);
     hou = min = sec = 0;
     watch.innerText = '00 : 00 : 00';

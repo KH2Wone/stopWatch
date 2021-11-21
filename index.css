@@ -1,16 +1,6 @@
 @import url(./default.css);
 
 
-/* bg 시계 아이콘 비내리는 효과 */
-/* 
-1. 원에 있는 start 누르면
-2. 하단에 stop or reset 버튼 생성
-3. stop누르면 일시정지
-4. 리셋 누르면 다시 stop, reset 버튼 사라지고 start만 존재하고
-숫자는 0으로 초기화
-*/
-
-
 article {
     width: 100vw;
     height: 100vh;
@@ -33,7 +23,6 @@ section {
 
 .title {
     text-align: center;
-    /* padding: 5% 0px 0px; */
     box-sizing: border-box;
     font-size: 4rem;
 }
@@ -56,10 +45,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-#nums span {
-    margin: 0px 1vw;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, .1);
 }
 
 /* || btns */
@@ -87,20 +73,16 @@ section {
     height: 100%;
     border: 1px solid #fff;
     border-radius: 47px;
-    background: linear-gradient(145deg, #e6e6e6, #ccc);
     box-shadow: 31px 31px 36px #cccccc,
         -31px -31px 36px #ffffff;
 }
 
 /* play */
 .control_btns li:first-child {
-    background: linear-gradient(145deg, #e6e6e6, #65AEE3);
+    background: linear-gradient(145deg, #fff, #65AEE3);
 }
 
 /* pause */
 .control_btns li:nth-child(2) {
-    background-color: #D76F6F;
-    background: linear-gradient(145deg, #e6e6e6, #D76F6F);
+    background: linear-gradient(145deg, #fff, #D76F6F);
 }
-
-/* reset */
