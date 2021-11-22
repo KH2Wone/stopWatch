@@ -52,6 +52,7 @@ let stopWatch = () => {
 let resetWatch = () => {
     // 이미 작동중인 스톱워치에서 reset 버튼 누를 시 START로 돌아오기 및 reset 기능 작동
     if(toggleId.innerText === 'STOP') stopWatch();
+    watch.style.color = '#333';
 
     clearInterval(timeRecord);
     hou = min = sec = 0;
