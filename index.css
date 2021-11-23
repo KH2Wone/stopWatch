@@ -18,7 +18,7 @@ section {
     border-radius: 57px;
     background: linear-gradient(145deg, #ffffff, #e6e6e6);
     box-shadow: 17px 17px 31px #dedede,
-    -17px -17px 31px #ffffff;
+        -17px -17px 31px #ffffff;
 }
 
 .title {
@@ -85,4 +85,53 @@ section {
 /* pause */
 .control_btns li:nth-child(2) {
     background: linear-gradient(145deg, #fff, #D76F6F);
+}
+
+
+/* || media query */
+@media (max-width: 1024px) {
+    section {
+        width: 88%;
+        height: 60vh;
+    }
+}
+
+@media (max-width: 962px) {
+    .title {
+        font-size: 3rem;
+    }
+
+    section {
+        width: 90%;
+    }
+
+    .control_btns li {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 601px) {
+    section {
+        height: 50vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 5vw;
+    }
+
+    section {
+        margin: 7vmin auto;
+    }
+
+    section,
+    .clock {
+        border-radius: 10%;
+    }
+
+    .control_btns li {
+        font-size: 6.5vmin;
+        border-radius: 21%;
+    }
 }
