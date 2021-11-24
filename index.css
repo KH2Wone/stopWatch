@@ -15,10 +15,10 @@ section {
     margin: 1vw auto;
     padding: 3% 5%;
     box-sizing: border-box;
-    border-radius: 57px;
-    background: linear-gradient(145deg, #ffffff, #e6e6e6);
-    box-shadow: 17px 17px 31px #dedede,
-        -17px -17px 31px #ffffff;
+    border-radius: 58px;
+    background: linear-gradient(145deg, #ffffff, #dddddd);
+    box-shadow:  13px 13px 26px #d0d0d0,
+                 -13px -13px 26px #ffffff;
 }
 
 .title {
@@ -113,6 +113,10 @@ section {
 @media (max-width: 601px) {
     section {
         height: 50vh;
+    }
+
+    #nums {
+        font-size: 11vmin;
     }
 }
 
