@@ -7,9 +7,9 @@ let timeRecord;
 
 //////////////////////////////////////////////////////////
 
-let moveClock = () => {
+const moveClock = () => {
     if (sec !== 59) {
-        // 
+        // 초 추가
         sec++;
     } else {
         // 이제 분 추가
@@ -28,8 +28,9 @@ let moveClock = () => {
     watch.innerText = `${hou < 10 ? "0"+hou : hou} : ${min < 10 ? "0"+min : min} : ${sec < 10 ? "0"+sec : sec}`;
 }
 
-let toggleSwitch = () => {
+const toggleSwitch = () => {
     if(toggleId.innerText === 'START') {
+        // START
         startWatch();
     } else {
         // STOP
@@ -37,19 +38,19 @@ let toggleSwitch = () => {
     }
 }
 
-let startWatch = () => {
+const startWatch = () => {
     timeRecord = setInterval(moveClock, 1000);
     toggleId.innerText = 'STOP';
     watch.style.color = '#333';
 }
 
-let stopWatch = () => {
+const stopWatch = () => {
     clearInterval(timeRecord);
     toggleId.innerText = 'START';
     watch.style.color = '#EF0000';
 }
 
-let resetWatch = () => {
+const resetWatch = () => {
     // 이미 작동중인 스톱워치에서 reset 버튼 누를 시 START로 돌아오기 및 reset 기능 작동
     if(toggleId.innerText === 'STOP') stopWatch();
     watch.style.color = '#333';
